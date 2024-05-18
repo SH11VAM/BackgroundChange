@@ -37,23 +37,19 @@ function App() {
     },
   ];
 
-  const [a, b] = useState("bg-cyan-950");
-
-  // const changer =(newColor)=>{
-  //   b(newColor);
-
-  // }
+  const [color, setColor] = useState("bg-cyan-950");
 
   return (
     <>
-      <div className={`w-[100wh] h-[100vh] ${a} pt-[180px]`}>
-      <h1 className="text-8xl font-sans font-normal bg-gradient-to-r from-slate-200 via-zinc-700  to-black bg-clip-text text-transparent  text-center"> Background Color</h1>
-      <div className="mt-[18%] ml-44">
-      <Button myArr={arr} changer={b} />
+      <div className={`w-[100wh] h-[100vh] ${color} pt-[180px]`}>
+        <h1 className="text-8xl font-sans font-normal bg-gradient-to-r from-slate-200 via-zinc-700  to-black bg-clip-text text-transparent  text-center">
+          {" "}
+          Background Color
+        </h1>
+        <div className="mt-[18%] ml-44">
+          <Button myArr={arr} changer={setColor} />
+        </div>
       </div>
-        
-      </div>
-      
     </>
   );
 }
