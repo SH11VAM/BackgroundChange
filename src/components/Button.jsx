@@ -1,3 +1,8 @@
+// myArr : array of color
+// changer : setColor of useState 
+
+
+
 function Button({ myArr, changer }) {
   const updateColor = (element) => {
     changer(element.value);
